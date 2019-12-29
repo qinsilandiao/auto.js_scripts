@@ -40,3 +40,23 @@ function newVersion() {
         newVersion.click();
     };
 }
+
+/**
+ * 自动提交评论
+ * content str 评论内容，默认为666
+*/
+function autoComment(content = "666") {
+    id('pz').findOnce().click();
+    sleep(1000);
+    b = id('pz').findOnce().bounds();
+    sleep(1000);
+    click(b.centerX(), b.centerY());
+    sleep(1000);
+    setText(content);
+    sleep(1000);
+    click(b.centerX(), b.centerY());
+    sleep(1000);
+    click(device.width - 80, b.centerY());
+    sleep(1000);
+    back();
+}
