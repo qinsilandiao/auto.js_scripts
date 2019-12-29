@@ -29,7 +29,7 @@ function youngWin() {
 function heartClick() {
     index = random(1, 5);
     if (index == 3) {
-        id('a4m').findOnce().click();
+        id('a4o').findOnce().click();
     }
     sleep(1000);
 }
